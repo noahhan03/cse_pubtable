@@ -72,7 +72,7 @@ class Timer:
             if self.start_time is None:  # Only update the start time if it is None
                 self.start_time = datetime.now()  # 현재 시각 저장
                 start_time_str = self.start_time.strftime('%H:%M:%S')
-                self.start_time_label.config(text=f"Started at: {start_time_str}")
+                self.start_time_label.config(text=f"{start_time_str}")
                 print(f"Timer {self.timer_number} Started at: {start_time_str}")  # 콘솔에 출력
         self.running = not self.running
         self.start_stop_button.config(text="Pause" if self.running else "Start")
